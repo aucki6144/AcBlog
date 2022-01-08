@@ -1,0 +1,113 @@
+#main_body {
+    background-image: url("../image/background_pic3.png");
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+.article_block {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 15px;
+    padding: 5px 30px;
+    box-shadow: 1px 5px 10px rgba(170, 170, 170, 0.63);
+}
+
+.profile_block {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 15px;
+    padding: 5px 30px;
+    box-shadow: 1px 5px 10px rgba(170, 170, 170, 0.63);
+}
+
+.file_block {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 200px;
+    margin: 15px;
+    padding: 5px 30px;
+    box-shadow: 1px 5px 10px rgba(170, 170, 170, 0.63);
+}
+
+.search_block  {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 200px;
+    margin: 15px;
+    padding: 5px 30px;
+    box-shadow: 1px 5px 10px rgba(170, 170, 170, 0.63);
+}
+
+.tag_block {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 200px;
+    margin: 15px;
+    padding: 5px 30px;
+    box-shadow: 1px 5px 10px rgba(170, 170, 170, 0.63);
+}
+
+.article_block_title {
+    font-family: "微软雅黑";
+}
+
+.article_block_about {
+    font-family: "微软雅黑 Light";
+}
+
+.search_block_title {
+    font-family: "微软雅黑";
+}
+
+
+.search input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    height: 50px;
+}
+
+.search {
+    margin: 10px;
+}
+
+.search button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: pink;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    height: 50px;
+}
+
+.search button:hover {
+    background: lightpink;
+}
+
+.space {
+    height: 20px;
+}
+
+.avatar {
+    background-image: url("../image/avatar1.jpg");
+    background-size: cover;
+    padding-top: 100px;
+    border-radius: 100px;
+    margin:0px auto;
+    width: 180px;
+    height: 180px;
+}
+
+.my_id {
+    text-align: center;
+    font-family: Segoe Script;
+}
+
+.about_me {
+    text-align: center;
+    font-family: "Segoe Script";
+}

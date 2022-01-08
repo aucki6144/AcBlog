@@ -1,0 +1,79 @@
+{% load static %}
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>This is a header</title>
+
+        <style>
+            #back_ground {
+                position: center;
+                width: auto;
+                height: 500px;
+                background-image: url("{% static 'image/header_pic2.jpg' %}");
+                background-repeat:no-repeat;
+                background-size: cover;
+            }
+            #grad1 {
+                height: 200px;
+                padding: 30px;
+                background-image: linear-gradient(to bottom, rgb(0, 0, 0 ,0.2), rgba(0, 0, 0, 0));
+
+                background-repeat:no-repeat;
+                background-size: cover;
+            }
+            #divide {
+                height: 200px;
+            }
+            #grad2 {
+                height: 100px;
+                /*padding: 50px;*/
+                background-image: linear-gradient(to bottom, rgb(0, 0, 0 , 0), rgba(256, 256, 256, 1));
+
+                background-repeat:no-repeat;
+                background-size: cover;
+            }
+            h1.head_title {
+                float: left;
+                font-family: Consolas;
+                font-style: oblique;
+            }
+            h2.daily_sentence {
+                position: relative;
+                float: right;
+                font-family:  "Segoe Script";
+                font-style: normal;
+            }
+            h1.center_title {
+                clear: both;
+                font-family: "BIZ UDPMincho Medium";
+                text-align: center;
+                font-weight: bold;
+                font-size: 70px;
+                line-height: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="back_ground">
+            <div id="grad1">
+                    <div class="display_flex">
+                        <h1 class="head_title">
+                            Jinlog.com
+                        </h1>
+<!--                        <h2 class="daily_sentence">-->
+<!--                            hell is empty，the devil is in the world-->
+<!--                        </h2>-->
+                    </div>
+
+                    <h1 class="center_title" >
+                        Jinlog ようこそ
+                    </h1>
+            </div>
+            <div id="divide">
+            </div>
+            <div id="grad2">
+            </div>
+        </div>
+    </body>
+</html>

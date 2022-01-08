@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        body{
+            height:  80px;
+            background-color: white;
+        }
+
+        .button:hover {
+            background: lightpink;
+        }
+
+        .button {
+            background-color: rgba(0, 0, 0, 0);
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid lightpink;
+            color: deeppink;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 10px;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            /*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
+            cursor: pointer;
+        }
+
+
+
+        #nav_background {
+            width: auto;
+            background-color: white;
+            height: 80px;
+        }
+
+        #button_container {
+            text-align: center;
+        }
+
+        #divide_line {
+            height: 2px;
+            background-color: rgba(255, 192, 203, 0.56);
+        }
+
+    </style>
+
+</head>
+    <body>
+        <div id="nav_background">
+            <div id="button_container">
+                <button class="button">
+                    首页
+                </button>
+                <button class="button">
+                    关于
+                </button>
+                <button class="button">
+                    联系
+                </button>
+                <button class="button">
+                    友链
+                </button>
+                <button class="button">
+                    赞赏
+                </button>
+            </div>
+        </div>
+        <div id="divide_line">
+        </div>
+    </body>
+</html>
