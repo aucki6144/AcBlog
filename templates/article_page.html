@@ -19,6 +19,8 @@
 
         <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
 
+
+
     </head>
 
     <body id="main_body">
@@ -28,25 +30,12 @@
 
         <div class="container">
             <div class="row clearfix">
-
 <!--                left content-->
 
                 <div class="col-md-8 column">
-                    {% for item in article_list %}
-                        <div class="article_block">
-                            <div class="page-header">
-                                <h1 class="article_block_title">
-                                    {{item.title}} <small>{{item.subtitle}}</small>
-                                </h1>
-                            </div>
-                            <p class="article_block_about">
-                                {{item.about}}
-                            </p>
-                            <p>
-                                {{item.path|safe}}
-                            </p>
-                        </div>
-                    {% endfor %}
+                    <div class="article_block">
+                        {{text | safe}}
+                    </div>
                 </div>
 
 <!--                right content-->
@@ -66,18 +55,6 @@
                         </p>
                     </div>
 
-                    <div class="search_block">
-                        <div class="page-header">
-                            <h2 class="search_block_title">
-                                搜索
-                            </h2>
-                        </div>
-                        <form class="search" action="/">
-                                <input type="text" placeholder="搜索.." name="search">
-                                <button type="submit"><i class="fa fa-search"></i></button>
-                        </form>
-                    </div>
-
                     <div class="file_block">
                         <div class="page-header">
                             <h2 class="search_block_title">
@@ -86,13 +63,6 @@
                         </div>
                     </div>
 
-                    <div class="tag_block">
-                        <div class="page-header">
-                            <h2 class="search_block_title">
-                                标签
-                            </h2>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -100,4 +70,12 @@
         {% include 'footer.html' %}
 
    </body>
+
+<script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
+        <script src="https://cdn.bootcss.com/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+            hljs.initLineNumbersOnLoad();
+        </script>
+
 </html>
