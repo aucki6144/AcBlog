@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, re_path
+from django.views.generic import RedirectView
 from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', views.main_page),
+    url(r'^favicon.ico$',RedirectView.as_view(url=r'static/image/favicon.ico')),   
     re_path("^article/(.+)/$", views.article_page)
 ]
