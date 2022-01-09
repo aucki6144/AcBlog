@@ -1,0 +1,59 @@
+#main_body {
+    background-image: url("../image/background_pic3.png");
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+.article_block {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 15px;
+    padding: 5px 30px;
+    box-shadow: 1px 5px 10px rgba(170, 170, 170, 0.63);
+}
+
+#my_profile {
+    height: 280px;
+}
+
+#my_profile_avatar {
+    float: left;
+    background-image: url("../image/avatar1.jpg");
+    background-size: cover;
+    border-radius: 100px;
+    margin-top:60px;
+    margin-left: 60px;
+    width: 180px;
+    height: 180px;
+}
+
+#about_me {
+    float: right;
+    margin-top:100px;
+    margin-right: 60px;
+    font-size: large;
+    font-family: "Segoe Script";
+}
+
+#float_divider {
+    clear: both;
+}
+
+#title_text {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 50px;
+    font-family: "微软雅黑";
+}
+
+#about_site {
+    font-size: large;
+    font-family: "微软雅黑";
+}
+
+#about_container {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 80px;
+}
+

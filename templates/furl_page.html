@@ -1,0 +1,57 @@
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Jinlog</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--        Import Stylesheet here-->
+
+<!--        Bootstrap 3.3.7-->
+<!--        font-awesome-->
+<!--        static css-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+        <link href="{% static '/css/furl_page.css' %}" rel="stylesheet">
+
+<!--        Import Scripts here-->
+
+        <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
+    </head>
+
+    <body id="main_body">
+
+        {% include 'header_short.html' %}
+        {% include 'nav_header.html' %}
+
+        <div class="container">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    {% for item in furl_list %}
+                        <div class="furl_button">
+                            <div id="item_container">
+                                <img src="{{item.imageSrc}}" id="img_avatar">
+
+                                <div id="contact_method">
+                                    <a id="furl_title" href="{{item.url}}">
+                                        {{item.title}}
+                                    </a>
+                                    <p id="furl_subtitle">
+                                        {{item.subtitle}}
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="divider_line">
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        {% include 'footer.html' %}
+
+   </body>
+</html>

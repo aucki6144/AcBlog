@@ -1,0 +1,60 @@
+#main_body {
+    background-image: url("../image/background_pic3.png");
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+.furl_button {
+    margin-top: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    padding: 5px 30px;
+    border: none;
+    box-shadow: 1px 5px 10px rgba(170, 170, 170, 0.63);
+}
+
+#img_avatar {
+    height: 150px;
+    width: 150px;
+    margin-top: 2px;
+    margin-left: 50px;
+    border-radius: 50%;
+    box-shadow: 1px 5px 10px rgba(170, 170, 170, 0.63);
+}
+
+#title_text {
+    color: rgba(0, 0, 0, 0.6);
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+#item_container {
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+    height: 180px;
+}
+
+#furl_subtitle {
+    font-family: 微软雅黑;
+    font-size: x-large;
+}
+
+#furl_title {
+    font-family: Consolas;
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#contact_method {
+    float: right;
+    margin-left: 80px;
+    width: 500px;
+}
+
+#furl_url {
+
+}

@@ -21,6 +21,9 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("about/", views.about_page),
+    path("contact/", views.contact_page),
+    path("furl/", views.furl_page),
     url(r'^$', views.main_page),
     url(r'^favicon.ico$',RedirectView.as_view(url=r'static/image/favicon.ico')),   
     re_path("^article/(.+)/$", views.article_page)
