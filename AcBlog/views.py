@@ -1,6 +1,8 @@
 import codecs
 
 import markdown
+from django.core import paginator
+from django.core.paginator import Paginator
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -21,28 +23,43 @@ def main_page(request):
     article_list_length = article_list.count()
     # article_path = "<a href=\'127.0.0.1:8000/article/"+"p1"+"\'>点击跳转</a>"
 
+    # item num performed in a single page
+    item_num = 8
+
+    pag = Paginator(article_list, item_num)
+    page_number = request.GET.get('page')
+    page_obj = pag.get_page(page_number)
+
+    if page_number:
+        target_page = int(str(page_number))
+    else:
+        target_page = 1
+
     item_list = []
 
-    for index in range(article_list_length):
-        model_object = Article.objects.get(id=index + 1)
-        article_path = "<a href=\'/article/" + str(index + 1) + "\'>阅读完整文章 >></a>"
-        item_title = model_object.getTitle
-        item_subtitle = model_object.getTime
-        item_about = model_object.getAbout
-        item = {
-            "title": item_title,
-            "subtitle": item_subtitle,
-            "about": item_about,
-            "path": article_path
-        }
-        item_list.append(item)
+    for index in range(item_num):
+        target_id = index + (target_page-1)*item_num+1
+        if target_id <= article_list_length:
+            model_object = Article.objects.get(id=target_id)
+            article_path = "<a href=\'/article/" + str(index + 1) + "\'>阅读完整文章 >></a>"
+            item_title = model_object.getTitle
+            item_subtitle = model_object.getTime
+            item_about = model_object.getAbout
+            item = {
+                "title": item_title,
+                "subtitle": item_subtitle,
+                "about": item_about,
+                "path": article_path
+            }
+            item_list.append(item)
 
     return render(request, 'main_page.html', {
         "article_list": item_list,
-        "num_test": article_list_length,
+        "num_test": 1,
         "article_path": article_path,
         "notice_show": notice_show,
-        "notice_content": notice_content
+        "notice_content": notice_content,
+        "page_obj": page_obj
     })
 
 

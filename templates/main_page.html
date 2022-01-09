@@ -27,6 +27,8 @@
         {% include 'header.html' %}
         {% include 'nav_header.html' %}
 
+<!--        {{num_test}}-->
+
         {% if notice_show %}
             <div id="notice_background">
                 <div id="notice_container">
@@ -58,6 +60,32 @@
                             </p>
                         </div>
                     {% endfor %}
+
+                    <div id="pager_container">
+                        <ul class="pagination">
+                            {% if page_obj.has_previous %}
+                            <li>
+                                <a href="?page=1">&laquo; first</a>
+                            </li>
+                            <li>
+                                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                            </li>
+                            {% endif %}
+                            <li>
+                                <span class="current">
+                                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                                </span>
+                            </li>
+                            {% if page_obj.has_next %}
+                            <li>
+                                <a href="?page={{ page_obj.next_page_number }}">next</a>
+                            </li>
+                            <li>
+                                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </div>
                 </div>
 
 <!--                right content-->
@@ -107,6 +135,7 @@
                 </div>
             </div>
         </div>
+
 
         {% include 'footer.html' %}
 
